@@ -77,8 +77,8 @@
 			var positionY = 0;
 			var speedY = 10;
 			var boardHeight = jQuery(window).height();
-			var randNumX = Math.random() * boardWidth;
-			var randNumY = Math.random() * boardHeight;
+			
+		
 			var colorStr = "rgb(50, 25, 250)";
 			var numOfclicks = 0
 			var misClicks = 0
@@ -118,8 +118,10 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionX = randNumX
-				positionY = randNumY
+				var randNumX = Math.random() * boardWidth;
+				var randNumY = Math.random() * boardHeight;
+				positionX = randNumX;
+				positionY = randNumY;
 
 				points = points + 1
 				changeBoxText(points)
@@ -127,11 +129,9 @@
 					if (speed > 0) {
 						speed = speed + 3;
 					}
-					else if (speed < 0) {
+					if (speed < 0) {
 						speed = speed - 3
 					}
-				}
-				if (points % 3 === 0) {
 					var randomColorX = Math.random() * 255;
 					var randomColorY = Math.random() * 255;
 					var randomColorZ = Math.random() * 255;
