@@ -40,6 +40,7 @@ var makeLevelData = function (window) {
     window.opspark.levelData = levelData;
   };
 };
+var level = levelData [currentLevel]
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (
